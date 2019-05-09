@@ -1,13 +1,39 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import axios from "axios";
+import grad from 'gradient-from-image' 
 
 class App extends React.Component {
+
   onSearchSubmit(term) {
     console.log(term);
     axios.get("http://api.tvmaze.com/singlesearch/shows", {
       params: { q: term, embed: "cast"}
     });
+  }
+
+  componentDidMount(){
+    this.getGradient()
+  }
+
+  getGradient(){
+    let url = "http://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg";
+
+    grad.gr(url).then(gr=>{
+   
+       console.log(gr)
+       /*
+       expected output
+       {
+           vibrant:array_Of_Hex,
+           relevant:array_Of_Hex,
+           getTextClr:string_Of Hex
+       }
+       */
+       let bg = "linear-gradient(" +  gr.relevant + ")";
+       let el = document.querySelector("body");
+       el.style.background = bg;
+    })
   }
 
   render() {
@@ -90,7 +116,7 @@ class App extends React.Component {
                 verticalAlign: "middle"
               }}
             >
-              <img src="http://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg" />
+              <img src="http://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg" style={{boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"}} />
             </div>
           </div>
           <div className="fifteen wide column">
