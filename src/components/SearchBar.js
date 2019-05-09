@@ -3,15 +3,15 @@ import React from "react";
 class SearchBar extends React.Component {
   state = { term: "" };
 
-  onFormSubmit(event){
+  onFormSubmit = (event) => {
       event.preventDefault();
-      console.log(this.state.term)
+      this.props.onSubmit(this.state.term)
   }
 
   render() {
     return (
       <div id="searchBar">
-        <form onSubmit={this.onFormSubmit.bind(this)}>
+        <form onSubmit={this.onFormSubmit}>
           <div className="ui massive fluid action input">
             <input
               type="text"
