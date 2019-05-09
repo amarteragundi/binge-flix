@@ -24,12 +24,37 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <style>
+      body {
+        background: #304352; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to top,
+          #d7d2cc,
+          #304352
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to top,
+          #d7d2cc,
+          #304352
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
       #searchBar {
         margin: 0px auto;
-        width: 900px;
-        margin-top: 5%;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        border-radius: 10px !important;
+        padding: 30px;
+        /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16), 0 1px 1px rgba(0, 0, 0, 0.23); */
+        /* position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; */
+      }
+
+      #searchBar input {
+        background: none;
+        border: 1px solid snow;
+        color: snow;
+      }
+      #searchBar .button {
+        background-color: snow;
       }
     </style>
     <title>React App</title>
