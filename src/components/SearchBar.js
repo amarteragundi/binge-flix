@@ -12,14 +12,13 @@ class SearchBar extends React.Component {
     return (
       <div id="searchBar">
         <form onSubmit={this.onFormSubmit}>
-          <div className="ui massive fluid action input">
+          <div className="ui massive fluid input">
             <input
               type="text"
               value={this.state.term}
-              placeholder="Search..."
+              placeholder="type tv show name and press enter ..."
               onChange={e => this.setState({ term: e.target.value.toUpperCase() })}
             />
-            <div className="ui button">Search</div>
           </div>
         </form>
       </div>
