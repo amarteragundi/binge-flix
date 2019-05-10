@@ -3,6 +3,9 @@ import SearchBar from "./SearchBar";
 import axios from "axios";
 import imageToGradient from "image-to-gradient";
 
+import TitleandRating from './TitleandRating';
+import ShowDescription from './showDescription'
+
 class App extends React.Component {
     onSearchSubmit(term) {
         console.log(term);
@@ -37,26 +40,7 @@ class App extends React.Component {
                 <div style={{ margin: "0px auto", padding: "30px" }}>
                     <div className="ui grid" style={{}}>
                         <div className="twelve wide column">
-                            <h1
-                                style={{
-                                    color: "white",
-                                    textTransform: "uppercase"
-                                }}
-                            >
-                                Friends |{" "}
-                                <span
-                                    style={{
-                                        fontSize: "14px",
-                                        verticalAlign: "middle"
-                                    }}
-                                >
-                                    <i
-                                        className="heart icon"
-                                        style={{ color: "#ff6d75" }}
-                                    />
-                                    4.3
-                                </span>
-                            </h1>
+                        <TitleandRating title="Friends" rating="9.8" />
                             <div
                                 style={{
                                     minHeight: "220px",
@@ -64,21 +48,21 @@ class App extends React.Component {
                                     lineHeight: "56pt"
                                 }}
                             >
-                                <p>
-                                    Six young (20-something) people from New
-                                    York City (Manhattan), on their own and
-                                    struggling to survive in the real world,
-                                    find the companionship, comfort and support
-                                    they get from each other to be the perfect
-                                    antidote to the pressures of life.
-                                </p>
-                                <p>
-                                    This average group of buddies goes through
-                                    massive mayhem, family trouble, past and
-                                    future romances, fights, laughs, tears and
-                                    surprises as they learn what it really means
-                                    to be a friend.
-                                </p>
+                                <ShowDescription description="<p>
+    Six young (20-something) people from New
+    York City (Manhattan), on their own and
+    struggling to survive in the real world,
+    find the companionship, comfort and support
+    they get from each other to be the perfect
+    antidote to the pressures of life.
+</p>
+<p>
+    This average group of buddies goes through
+    massive mayhem, family trouble, past and
+    future romances, fights, laughs, tears and
+    surprises as they learn what it really means
+    to be a friend.
+</p>"/>
                                 <div
                                     className="ui grid"
                                     style={{ marginTop: "30px" }}
