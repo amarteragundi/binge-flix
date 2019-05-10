@@ -1,7 +1,8 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import axios from "axios";
-import grad from 'gradient-from-image' 
+import imageToGradient  from 'image-to-gradient';
+
 
 class App extends React.Component {
 
@@ -17,22 +18,16 @@ class App extends React.Component {
   }
 
   getGradient(){
-    let url = "http://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg";
-
-    grad.gr(url).then(gr=>{
-   
-       console.log(gr)
-       /*
-       expected output
-       {
-           vibrant:array_Of_Hex,
-           relevant:array_Of_Hex,
-           getTextClr:string_Of Hex
-       }
-       */
-       let bg = "linear-gradient(" +  gr.relevant + ")";
-       let el = document.querySelector("body");
-       el.style.background = bg;
+    let url = "http://static.tvmaze.com/uploads/images/medium_portrait/165/414895.jpg";
+    let options = {
+      angle:0, // gradient angle in degrees
+      steps:5  // number of steps
+  }
+  
+    imageToGradient(url, options, function(err, cssGradient) {
+      console.log(cssGradient);
+    let el = document.querySelector("body");
+     el.style.background = cssGradient;
     })
   }
 
@@ -70,7 +65,7 @@ class App extends React.Component {
                   tears and surprises as they learn what it really means to be a
                   friend.
                 </p>
-                <div className="ui grid">
+                <div className="ui grid" style={{marginTop:"30px"}}>
                   <div className="four wide column">
                     <h3 className="ui header">
                       <i className="large icons">
@@ -116,7 +111,7 @@ class App extends React.Component {
                 verticalAlign: "middle"
               }}
             >
-              <img src="http://static.tvmaze.com/uploads/images/medium_portrait/41/104550.jpg" style={{boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"}} />
+              <img src="http://static.tvmaze.com/uploads/images/medium_portrait/165/414895.jpg" style={{boxShadow: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)"}} />
             </div>
           </div>
           <div className="fifteen wide column">
@@ -154,7 +149,6 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </div>
       </div>
     );
