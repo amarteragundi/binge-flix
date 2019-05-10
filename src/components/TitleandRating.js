@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const TitleandRating = (props) => {
+const TitleandRating = props => {
     return (
         <h1
             style={{
@@ -15,7 +15,7 @@ const TitleandRating = (props) => {
                     verticalAlign: "middle"
                 }}
             >
-                <i className="heart icon" style={{ color: "#ff6d75" }} />
+                <i className="heart icon" style={{ color: "#ff6d75", marginLeft:"5px" }} />
                 {props.rating}
             </span>
         </h1>
