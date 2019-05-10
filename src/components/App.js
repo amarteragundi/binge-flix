@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import axios from "axios";
+import tvmaze from "../api/tvmaze";
 import imageToGradient from "image-to-gradient";
 
 import TitleandRating from "./TitleandRating";
@@ -13,7 +13,7 @@ class App extends React.Component {
     state = MyState;
  onSearchSubmit = async (term) => {
         console.log(term);
-        const response = await axios.get("http://api.tvmaze.com/singlesearch/shows", {
+        const response = await tvmaze.get("/singlesearch/shows", {
             params: { q: term, embed: "cast" }
         });
 
