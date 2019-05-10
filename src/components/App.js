@@ -3,8 +3,9 @@ import SearchBar from "./SearchBar";
 import axios from "axios";
 import imageToGradient from "image-to-gradient";
 
-import TitleandRating from './TitleandRating';
-import ShowDescription from './showDescription'
+import TitleandRating from "./TitleandRating";
+import ShowDescription from "./showDescription";
+import OtherDetails from "./OtherDetails";
 
 class App extends React.Component {
     onSearchSubmit(term) {
@@ -40,7 +41,7 @@ class App extends React.Component {
                 <div style={{ margin: "0px auto", padding: "30px" }}>
                     <div className="ui grid" style={{}}>
                         <div className="twelve wide column">
-                        <TitleandRating title="Friends" rating="9.8" />
+                            <TitleandRating title="Friends" rating="9.8" />
                             <div
                                 style={{
                                     minHeight: "220px",
@@ -48,7 +49,8 @@ class App extends React.Component {
                                     lineHeight: "56pt"
                                 }}
                             >
-                                <ShowDescription description="<p>
+                                <ShowDescription
+                                    description="<p>
     Six young (20-something) people from New
     York City (Manhattan), on their own and
     struggling to survive in the real world,
@@ -62,45 +64,28 @@ class App extends React.Component {
     future romances, fights, laughs, tears and
     surprises as they learn what it really means
     to be a friend.
-</p>"/>
+</p>"
+                                />
                                 <div
                                     className="ui grid"
                                     style={{ marginTop: "30px" }}
                                 >
-                                    <div className="four wide column">
-                                        <h3 className="ui header">
-                                            <i className="large icons">
-                                                <i className="language icon" />
-                                            </i>
-                                            English
-                                        </h3>
-                                    </div>
-                                    <div className="four wide column">
-                                        <h3 className="ui header">
-                                            <i className="large icons">
-                                                <i className="film icon" />
-                                            </i>
-                                            Comedy, Romantic
-                                        </h3>
-                                    </div>
-
-                                    <div className="four wide column">
-                                        <h3 className="ui header">
-                                            <i className="large icons">
-                                                <i className="calendar alternate icon" />
-                                            </i>
-                                            20:00, Thursday
-                                        </h3>
-                                    </div>
-
-                                    <div className="four wide column">
-                                        <h3 className="ui header">
-                                            <i className="large icons">
-                                                <i className="circle icon" />
-                                            </i>
-                                            Running
-                                        </h3>
-                                    </div>
+                                    <OtherDetails
+                                        icon="language"
+                                        content="English"
+                                    />
+                                    <OtherDetails
+                                        icon="film"
+                                        content="Comedy, Romantic"
+                                    />
+                                    <OtherDetails
+                                        icon="calendar"
+                                        content="20:00, Thursday"
+                                    />
+                                    <OtherDetails
+                                        icon="circle"
+                                        content="Running"
+                                    />
                                 </div>
                             </div>
                         </div>
