@@ -7,15 +7,19 @@ import TitleandRating from "./TitleandRating";
 import ShowDescription from "./showDescription";
 import OtherDetails from "./OtherDetails";
 import Cast from "./Cast";
+import MyState from './State';
 
 class App extends React.Component {
-   async onSearchSubmit(term) {
+    state = MyState;
+ onSearchSubmit = async (term) => {
         console.log(term);
         const response = await axios.get("http://api.tvmaze.com/singlesearch/shows", {
             params: { q: term, embed: "cast" }
         });
 
-        console.log(response.data)
+        this.setState({response: response.data});
+        console.log(this.state);
+    
     }
 
     componentDidMount() {
