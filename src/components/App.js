@@ -6,6 +6,7 @@ import imageToGradient from "image-to-gradient";
 import TitleandRating from "./TitleandRating";
 import ShowDescription from "./showDescription";
 import OtherDetails from "./OtherDetails";
+import Cast from './Cast';
 
 class App extends React.Component {
     onSearchSubmit(term) {
@@ -106,39 +107,11 @@ class App extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className="fifteen wide column">
+                    <div className="sixteen wide column">
                         <h1>Main Cast</h1>
                         <div className="ui six column grid">
-                            <div className="column">
-                                <div className="ui fluid card">
-                                    <div className="image">
-                                        <img src="/images/avatar/large/daniel.jpg" />
-                                    </div>
-                                    <div className="content">
-                                        <a className="header">Daniel Louise</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="column">
-                                <div className="ui fluid card">
-                                    <div className="image">
-                                        <img src="/images/avatar/large/helen.jpg" />
-                                    </div>
-                                    <div className="content">
-                                        <a className="header">Helen Troy</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="column">
-                                <div className="ui fluid card">
-                                    <div className="image">
-                                        <img src="/images/avatar/large/elliot.jpg" />
-                                    </div>
-                                    <div className="content">
-                                        <a className="header">Elliot Fu</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <Cast img="http://static.tvmaze.com/uploads/images/medium_portrait/165/414895.jpg" charName="Arrow" name="Arrow" />
+                            
                         </div>
                     </div>
                 </div>
