@@ -17,14 +17,24 @@ class App extends React.Component {
       params: { q: term, embed: "cast" }
     });
     let data = response.data;
-    this.setState({ title: data.name, rating: data.rating.average, poster:data.image.medium, description: data.summary });
+    this.setState({
+      title: data.name,
+      rating: data.rating.average,
+      poster: data.image.medium,
+      description: data.summary,
+      OtherDetails: {
+        language: data.language,
+        genre: data.genres,
+        schedule: data.schedule
+      }
+    });
   };
 
-  componentDidUpdate(){
-	this.getGradient();
+  componentDidUpdate() {
+    this.getGradient();
   }
 
-  getGradient(){
+  getGradient() {
     let options = {
       angle: 0, // gradient angle in degrees
       steps: 5 // number of steps
@@ -44,7 +54,10 @@ class App extends React.Component {
         <div style={{ margin: "0px auto", padding: "30px" }}>
           <div className="ui grid" style={{}}>
             <div className="twelve wide column">
-              <TitleandRating title={this.state.title} rating={this.state.rating} />
+              <TitleandRating
+                title={this.state.title}
+                rating={this.state.rating}
+              />
               <div
                 style={{
                   minHeight: "220px",
@@ -52,9 +65,7 @@ class App extends React.Component {
                   lineHeight: "56pt"
                 }}
               >
-                <ShowDescription
-                  description={this.state.description}
-                />
+                <ShowDescription description={this.state.description} />
                 <div className="ui grid" style={{ marginTop: "30px" }}>
                   <OtherDetails icon="language" content="English" />
                   <OtherDetails icon="film" content="Comedy, Romantic" />
