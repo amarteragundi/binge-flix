@@ -9,11 +9,13 @@ import OtherDetails from "./OtherDetails";
 import Cast from "./Cast";
 
 class App extends React.Component {
-    onSearchSubmit(term) {
+   async onSearchSubmit(term) {
         console.log(term);
-        axios.get("http://api.tvmaze.com/singlesearch/shows", {
+        const response = await axios.get("http://api.tvmaze.com/singlesearch/shows", {
             params: { q: term, embed: "cast" }
         });
+
+        console.log(response.data)
     }
 
     componentDidMount() {
@@ -66,7 +68,7 @@ class App extends React.Component {
                                         content="Comedy, Romantic"
                                     />
                                     <OtherDetails
-                                        icon="calendar"
+                                        icon="calendar outline"
                                         content="20:00, Thursday"
                                     />
                                     <OtherDetails
