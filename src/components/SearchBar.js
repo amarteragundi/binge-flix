@@ -17,7 +17,7 @@ class SearchBar extends React.Component {
               type="text"
               value={this.state.term}
               placeholder="Search..."
-              onChange={e => this.setState({ term: e.target.value })}
+              onChange={e => this.setState({ term: e.target.value.toUpperCase() })}
             />
             <div className="ui button">Search</div>
           </div>
