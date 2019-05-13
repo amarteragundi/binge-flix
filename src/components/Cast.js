@@ -1,23 +1,27 @@
 import React from "react";
 
 const Cast = props => {
-    return (
-        <div className="column">
-            <div className="ui fluid card" style={{boxShadow:"none"}}>
-                <div className="image">
-                    <img src={props.img} />
-                </div>
-                <div className="content">
-                    <a className="header">{props.charName}</a>
-                    <div className="meta">
-                        <a>
-                            Played by {props.name}
-                        </a>
+    let details = props.details;
+    let displayCast = details.map((item, key) => {
+        return (
+            <div key={key} className="column">
+                <div className="ui fluid card" style={{ boxShadow: "none" }}>
+                    <div className="image">
+                        <img src={item.character.image.medium} />
+                    </div>
+                    <div className="content">
+                        <a className="header">{item.character.name}</a>
+                        <div className="meta">
+                            <a>Played by {item.person.name}</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    });
+    
+return <div className="ui six column grid">{displayCast}</div>
 };
+
 
 export default Cast;
