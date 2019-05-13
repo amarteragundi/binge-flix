@@ -4,7 +4,7 @@ let MyState = {
   description: "",
   otherDetails: [],
   poster: "",
-  cast: {}
+  cast: []
 };
 
 export default MyState;
