@@ -27,7 +27,8 @@ class App extends React.Component {
                 data.genres,
                 data.schedule,
                 data.status
-            ]
+            ],
+            cast: data._embedded.cast
         });
     };
 
@@ -69,9 +70,9 @@ class App extends React.Component {
                                 <ShowDescription
                                     description={this.state.description}
                                 />
-                                 <OtherDetails
-                                        details={this.state.otherDetails}
-                                    />
+                                <OtherDetails
+                                    details={this.state.otherDetails}
+                                />
                             </div>
                         </div>
                         <div
@@ -93,13 +94,8 @@ class App extends React.Component {
                     </div>
                     <div className="sixteen wide column">
                         <h1>Main Cast</h1>
-                        <div className="ui six column grid">
-                            <Cast
-                                img="http://static.tvmaze.com/uploads/images/medium_portrait/95/239388.jpg"
-                                charName="Bartholomew Henry 'Barry' Allen / The Flash"
-                                name="Grant Gustin"
-                            />
-                        </div>
+
+                        <Cast details={this.state.cast} />
                     </div>
                 </div>
             </div>
