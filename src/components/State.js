@@ -2,7 +2,7 @@ let MyState = {
   title: "",
   rating: 0,
   description: "",
-  otherDetails: {},
+  otherDetails: [],
   poster: "",
   cast: {}
 };
