@@ -108,7 +108,7 @@ class App extends React.Component {
                                     verticalAlign: "middle"
                                 }}
                             >
-                                <img
+                                <img alt="show poster"
                                     src={this.state.poster}
                                     style={{
                                         boxShadow:
