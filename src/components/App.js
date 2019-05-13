@@ -92,11 +92,8 @@ class App extends React.Component {
                             />
                         </div>
                     </div>
-                    <div className="sixteen wide column">
-                        <h1>Main Cast</h1>
 
-                        <Cast details={this.state.cast} />
-                    </div>
+                    <Cast details={this.state.cast} />
                 </div>
             </div>
         );

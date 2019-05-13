@@ -7,7 +7,13 @@ const Cast = props => {
             <div key={key} className="column">
                 <div className="ui fluid card" style={{ boxShadow: "none" }}>
                     <div className="image">
-                        <img src={item.character.image.medium} />
+                        <img
+                            src={
+                                item.character.image
+                                    ? item.character.image.medium
+                                    : ""
+                            }
+                        />
                     </div>
                     <div className="content">
                         <a className="header">{item.character.name}</a>
@@ -19,9 +25,12 @@ const Cast = props => {
             </div>
         );
     });
-    
-return <div className="ui six column grid">{displayCast}</div>
-};
 
+    return (
+        <div className="sixteen wide column">
+            <div className="ui six column grid">{displayCast}</div>
+        </div>
+    );
+};
 
 export default Cast;
