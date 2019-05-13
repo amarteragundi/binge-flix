@@ -1,4 +1,5 @@
 let MyState = {
+  search: false,
   title: "",
   rating: 0,
   description: "",
