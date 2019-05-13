@@ -41,7 +41,7 @@ class App extends React.Component {
                 alert("No shows found!! Make sure the search term is correct");
             });
 
-            this.hideLoader();
+        this.hideLoader();
     };
 
     componentDidMount() {
@@ -70,7 +70,6 @@ class App extends React.Component {
             let el = document.querySelector("body");
             el.style.background = cssGradient;
         });
-        
     }
 
     render() {
@@ -108,7 +107,7 @@ class App extends React.Component {
                                     verticalAlign: "middle"
                                 }}
                             >
-                                <img alt="show poster"
+                                <img
                                     src={this.state.poster}
                                     style={{
                                         boxShadow:
