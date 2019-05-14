@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/binge-flix/precache-manifest.9bfeaf7a96537e9c217280ad8492f830.js"
+  "/binge-flix/precache-manifest.c0f41b006ff53455d97d27f70a5abbcc.js"
 );
 
 self.addEventListener('message', (event) => {

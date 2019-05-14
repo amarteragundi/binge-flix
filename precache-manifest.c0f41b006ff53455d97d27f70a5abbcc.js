@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d5274baa39beb51f448f8318114d34e",
+    "revision": "cfd615445a63164589bd4eeab38a3299",
     "url": "/binge-flix/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/binge-flix/static/js/2.6b508abd.chunk.js"
   },
   {
-    "revision": "ff3fd1f8982f50f328bd",
-    "url": "/binge-flix/static/js/main.3cc71c57.chunk.js"
+    "revision": "cb24e3217881186c83b0",
+    "url": "/binge-flix/static/js/main.ce7cd40b.chunk.js"
   },
   {
     "revision": "c64740502cb4584efa94",

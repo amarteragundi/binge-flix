@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/binge-flix/static/js/main.3cc71c57.chunk.js",
-    "main.js.map": "/binge-flix/static/js/main.3cc71c57.chunk.js.map",
+    "main.js": "/binge-flix/static/js/main.ce7cd40b.chunk.js",
+    "main.js.map": "/binge-flix/static/js/main.ce7cd40b.chunk.js.map",
     "runtime~main.js": "/binge-flix/static/js/runtime~main.6a9a7db4.js",
     "runtime~main.js.map": "/binge-flix/static/js/runtime~main.6a9a7db4.js.map",
     "static/js/2.6b508abd.chunk.js": "/binge-flix/static/js/2.6b508abd.chunk.js",
     "static/js/2.6b508abd.chunk.js.map": "/binge-flix/static/js/2.6b508abd.chunk.js.map",
     "index.html": "/binge-flix/index.html",
-    "precache-manifest.9bfeaf7a96537e9c217280ad8492f830.js": "/binge-flix/precache-manifest.9bfeaf7a96537e9c217280ad8492f830.js",
+    "precache-manifest.c0f41b006ff53455d97d27f70a5abbcc.js": "/binge-flix/precache-manifest.c0f41b006ff53455d97d27f70a5abbcc.js",
     "service-worker.js": "/binge-flix/service-worker.js"
   }
 }
