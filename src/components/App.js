@@ -25,7 +25,7 @@ class App extends React.Component {
                 this.setState({
                     title: data.name,
                     rating: data.rating.average,
-                    poster: data.image.medium,
+                    poster: data.image.medium.replace('http','https'),
                     description: data.summary,
                     otherDetails: [
                         data.language,
