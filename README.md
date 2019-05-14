@@ -1,3 +1,5 @@
+A React App to find all the information about your favourite TV shows. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
