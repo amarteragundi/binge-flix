@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/binge-flix/static/js/main.ce7cd40b.chunk.js",
-    "main.js.map": "/binge-flix/static/js/main.ce7cd40b.chunk.js.map",
-    "runtime~main.js": "/binge-flix/static/js/runtime~main.6a9a7db4.js",
-    "runtime~main.js.map": "/binge-flix/static/js/runtime~main.6a9a7db4.js.map",
-    "static/js/2.6b508abd.chunk.js": "/binge-flix/static/js/2.6b508abd.chunk.js",
-    "static/js/2.6b508abd.chunk.js.map": "/binge-flix/static/js/2.6b508abd.chunk.js.map",
-    "index.html": "/binge-flix/index.html",
-    "precache-manifest.c0f41b006ff53455d97d27f70a5abbcc.js": "/binge-flix/precache-manifest.c0f41b006ff53455d97d27f70a5abbcc.js",
-    "service-worker.js": "/binge-flix/service-worker.js"
+    "main.js": "/tv-show-cast/static/js/main.c11ada48.chunk.js",
+    "main.js.map": "/tv-show-cast/static/js/main.c11ada48.chunk.js.map",
+    "runtime~main.js": "/tv-show-cast/static/js/runtime~main.be20b957.js",
+    "runtime~main.js.map": "/tv-show-cast/static/js/runtime~main.be20b957.js.map",
+    "static/js/2.6b508abd.chunk.js": "/tv-show-cast/static/js/2.6b508abd.chunk.js",
+    "static/js/2.6b508abd.chunk.js.map": "/tv-show-cast/static/js/2.6b508abd.chunk.js.map",
+    "index.html": "/tv-show-cast/index.html",
+    "precache-manifest.b98f8a62653f8f7a1e349c64515026ce.js": "/tv-show-cast/precache-manifest.b98f8a62653f8f7a1e349c64515026ce.js",
+    "service-worker.js": "/tv-show-cast/service-worker.js"
   }
 }
